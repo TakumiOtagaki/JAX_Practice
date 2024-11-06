@@ -33,6 +33,7 @@ for N in N_values:
     vectorized_times.append(time.time() - start)
     
     # JITコンパイルされたベクトル化関数の実行時間を計測
+    result_jit_vectorized = jit_vectorized_compute(x)
     start = time.time()
     result_jit_vectorized = jit_vectorized_compute(x)
     jit_vectorized_times.append(time.time() - start)
